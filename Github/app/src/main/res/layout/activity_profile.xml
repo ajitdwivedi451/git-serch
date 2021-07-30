@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6A3"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/Pimage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+    <TextView
+        android:id="@+id/pbio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BIO :Learn Code Repeat"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Pfollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:text="FOLLOWERS:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Pfollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:text="FOLLOWING:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repolist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:scrollbars="vertical"
+        android:scrollbarSize="50dp"
+        tools:listitem="@layout/itemrepo"
+
+        />
+
+
+</LinearLayout>
